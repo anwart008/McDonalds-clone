@@ -89,7 +89,7 @@ export const Cart = () => {
 
             <div className="container-fluid col-sm column text-center rounded mt-3 p-3 cart">
                 <div><h2>Cart Summary</h2></div>
-                <div className="col-30 col-md-15 mt-5 p-3 column rounded ">
+                <div className="col-30 col-md-15 m-5 p-3 column rounded ">
                     <div className="spacecbetween">
                         <h4>Subtotal:</h4><h4>₹{price}</h4>
                     </div>
