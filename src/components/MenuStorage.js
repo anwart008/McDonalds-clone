@@ -8,7 +8,7 @@ export const MenuStorage = () => {
     const getLocalName =()=>{
         let localList = localStorage.getItem('name');
     
-        if (localList!==[]){
+        if (localList!==[]&&localList!==null){
             return JSON.parse(localStorage.getItem('name'));
         } else {
             return [];
@@ -18,7 +18,7 @@ export const MenuStorage = () => {
     const getLocalPrice =()=>{
         let localList = localStorage.getItem('price');
     
-        if (localList!==0){
+        if (localList!==0&&localList!==null){
             return JSON.parse(localStorage.getItem('price'));
         } else {
             return 0;
@@ -44,11 +44,11 @@ export const MenuStorage = () => {
 
     useEffect(() => {
         localStorage.setItem("name",JSON.stringify(list))
-    }, [list])
+    }, [list]);
 
     useEffect(() => {
         localStorage.setItem("price",JSON.stringify(price))
-    }, [price])
+    }, [price]);
 
     const getMenu = async () => {
         const response = await fetch('https://run.mocky.io/v3/9d71cb03-a9f9-4d70-bae2-9d3adaa1cfe7');

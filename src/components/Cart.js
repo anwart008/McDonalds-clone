@@ -8,7 +8,7 @@ export const Cart = () => {
     const getLocalName =()=>{
         let localList = localStorage.getItem('name');
     
-        if (localList){
+        if (localList!==[]&&localList!==null){
             return JSON.parse(localStorage.getItem('name'));
         } else {
             return [];
@@ -18,7 +18,7 @@ export const Cart = () => {
     const getLocalPrice =()=>{
         let localList = localStorage.getItem('price');
     
-        if (localList){
+        if (localList!==0&&localList!==null){
             return JSON.parse(localStorage.getItem('price'));
         } else {
             return 0;
